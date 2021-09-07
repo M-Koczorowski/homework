@@ -11,5 +11,8 @@ unsigned fib( unsigned n )
 
 int main()
 {
-    std::cout << fib( 6 );
+    int input;
+    std::cout<<"podaj którą liczbe ciągu fibonacciego wypisac";
+    std::cin>>input;
+    std::cout << fib(input);
 }
