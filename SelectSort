@@ -49,3 +49,124 @@ int main()
     printArray(arr, n);
     return 0;
 }
+
+
+
+
+------------------------------------------------------------------------------------------------
+// v2
+// this somehow works but is bunch of stolen shit 
+
+#include <bits/stdc++.h>
+using namespace std;
+ const int ile = 10;
+void swap(int *xp, int *yp)
+{
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
+ 
+void selectionSort(int arr[], int n)
+{
+    int i, j, min_idx;
+ 
+    // One by one move boundary of unsorted subarray
+    for (i = 0; i < n-1; i++)
+    {
+        // Find the minimum element in unsorted array
+        min_idx = i;
+        for (j = i+1; j < n; j++)
+        if (arr[j] < arr[min_idx])
+            min_idx = j;
+ 
+        // Swap the found minimum element with the first element
+        swap(&arr[min_idx], &arr[i]);
+    }
+}
+ 
+/* Function to print an array */
+void printArray(int arr[], int ile)
+{
+    int i;
+    for (i=0; i < ile; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+}
+ 
+// Driver program to test above functions
+int main()
+{
+    
+   // int arr[] = {64, 25, 12, 22, 11, 44, 46, 35};
+   for(int i=0;i<ile;i++)
+    {int arr[ile]={rand()%100};}  //Generate number between 0 t
+    int n = ile;
+    int arr[ile];
+    selectionSort(arr, n);
+    cout << "Sorted array: \n";
+    printArray(arr, n);
+    return 0;
+}
+
+----------------------------------------------------------------------------------------------------
+
+// this also works
+#include <bits/stdc++.h>
+using namespace std;
+ const int ile = 10;
+void swap(int *xp, int *yp)
+{
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
+ 
+void selectionSort(int arr[], int n)
+{
+    int i, j, min_idx;
+ 
+    // One by one move boundary of unsorted subarray
+    for (i = 0; i < n-1; i++)
+    {
+        n=ile;
+        // Find the minimum element in unsorted array
+        min_idx = i;
+        for (j = i+1; j < n; j++)
+        if (arr[j] < arr[min_idx])
+            min_idx = j;
+ 
+        // Swap the found minimum element with the first element
+        swap(&arr[min_idx], &arr[i]);
+    }
+}
+ 
+/* Function to print an array */
+void printArray(int arr[], int n)
+{
+    int i;
+    for (i=0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+}
+ 
+// Driver program to test above functions
+int main()
+{
+    
+   // int arr[] = {64, 25, 12, 22, 11, 44, 46, 35};
+   int n=ile;
+   for(int i=0;i<n;i++)
+   
+    {
+        n=ile;
+        int arr[i]={rand()%10};
+        
+    } //Generate number between 0 t
+    //int n = ile;
+    int arr[ile];
+    selectionSort(arr, n);
+    cout << "Sorted array: \n";
+    printArray(arr, n);
+    return 0;
+}
