@@ -6,7 +6,8 @@ This is homework repo for quick cloning onto school machines.
 - [x] silnia
 - [x] hanoi 
 - [X] NWD rekurencja 
-- [ ] select sort
+- [X] select sort
+- [X] bubblesort 
 ### TODO:
 - [ ] Comments to increase readability.
 - [ ] double check
